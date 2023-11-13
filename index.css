@@ -93,6 +93,9 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   row-gap: 20px;
+  padding: 0 auto;
+  justify-items: center;
+
 }
 .bookcard {
   width: 220px;
@@ -178,4 +181,10 @@ h1 {
   .bookshelve {
     grid-template-columns: 1fr;
   }
+  .bookcard {
+    width: 90%;
+    height: auto;
+  }
+
+  
 }
