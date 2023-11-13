@@ -1,0 +1,181 @@
+:root {
+  --priclr: rgb(7, 7, 63);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Courier New', Courier, monospace; */
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* font-family: 'Courier New', Courier, monospace; */
+  /* font-family: 'Courier New', Courier, monospace; */
+}
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .menu ul li {
+  margin: 15px;
+  list-style: none;
+  /* padding: 5px 10px; */
+  border-radius: 25px;
+}
+.navbar .menu ul li a:hover {
+  background-color: aqua;
+  /* transform: translateY(15px); */
+}
+.navbar .menu ul li a {
+  margin: 15px;
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 25px;
+}
+.navbar .menu ul li a.active {
+  color: brown;
+  font-weight: 900;
+  font-size: 20px;
+  /* transform: translate(-50px); */
+}
+.navbar .menu span {
+  display: none;
+  border: 3px solid;
+  font-weight: 900;
+  padding: 0px 5px 2px;
+  border-radius: 7px;
+  font-size: 28px;
+}
+h1 {
+  text-align: center;
+}
+.heroimg {
+  width: 100%;
+  height: 250px;
+}
+.heroimg img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ------------ Book shelve -----------------------*/
+.bookshelve {
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 20px;
+}
+.bookcard {
+  width: 220px;
+  height: 370px;
+  border-radius: 7px;
+  border: 2px solid var(--priclr);
+  background-color: aqua;
+}
+.bcimg {
+  width: 100%;
+  border-radius: 7px;
+}
+.bcimg img {
+  border-radius: 7px;
+}
+.bookcard h3 {
+  margin: 7px 0 5px;
+  text-align: center;
+}
+.bookcard div {
+  display: flex;
+  justify-content: center;
+  color: rgb(110, 106, 106);
+}
+.bookcard .pricebtn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
+}
+.bookcard .pricebtn button {
+  padding: 5px 20px;
+  background-color: var(--priclr);
+  color: aliceblue;
+  border-radius: 25px;
+}
+.bookcard .pricebtn .price {
+  font-size: 24px;
+  color: var(--priclr);
+}
+
+/* Media uery starts here --------------------------*/
+@media only screen and (max-width: 392px) {
+    .bookshelve {
+        grid-template-columns: 1fr;
+      }
+}
+@media only screen and (max-width: 576px) {
+  .navbar .menu:hover ul {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: burlywood;
+    width: 90%;
+    height: 80%;
+    animation: slide 3s 1;
+    border-bottom-right-radius: 100%;
+  }
+  @keyframes slide {
+    from {
+      width: 0px;
+      height: 0;
+      opacity: 0;
+    }
+    to {
+      width: 90%;
+      height: 80%;
+      opacity: 1;
+    }
+  }
+
+  .navbar .menu ul li a {
+    padding: 5px 150px 5px 15px;
+  }
+
+  .navbar .menu span {
+    display: block;
+  }
+  .navbar .menu ul {
+    display: none;
+  }
+  .bookshelve {
+    grid-template-columns: 1fr 1fr;
+  }
+}
