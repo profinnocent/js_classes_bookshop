@@ -22,8 +22,12 @@ export default class User {
         return this._firstname;
     }
 
-    loginUser(){
+    static loginUser(){
         return "login successful";
+    }
+
+    addBook(book_obj){
+        this.books.push(book_obj)
     }
 }
 

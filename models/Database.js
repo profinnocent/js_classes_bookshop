@@ -1,12 +1,19 @@
 export default class Database {
     constructor(){
-        this.bookstoredb = [];
 
-        if(localStorage.getItem('bookstoredb')==null){
-            localStorage.setItem('bookstoredb', JSON.stringify(this.bookstoredb))
+        if(localStorage.getItem('bookShopdb')==null){
+            localStorage.setItem('bookShopdb', JSON.stringify(bookShopDB))
         }
         else{
-            this.bookstoredb = localStorage.getItem('bookstoredb');
+            bookShopDB = localStorage.getItem('bookShopdb');
         }
     }
+
+    updateDB(){
+        // bookShopDB.push(element)
+        localStorage.setItem('bookShopdb', JSON.stringify(bookShopDB))
+    }
 }
+
+let bookShopDB = [];
+export {bookShopDB};

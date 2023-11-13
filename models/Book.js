@@ -1,4 +1,5 @@
 export default class Book {
+    
     constructor(title, author, category, pub_date, image){
         this.id = 0;
         this.verified = 0;
@@ -11,10 +12,7 @@ export default class Book {
         this.author = author;
         this.category = category;
         this.pub_date = pub_date;
-
-        
     }
-
     
 }
 

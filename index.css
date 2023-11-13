@@ -176,6 +176,6 @@ h1 {
     display: none;
   }
   .bookshelve {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
